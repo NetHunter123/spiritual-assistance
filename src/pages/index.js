@@ -11,10 +11,16 @@ import Payment from "@/components/sections/Payment";
 import ContactUs from "@/components/sections/ContactUs";
 import {IconBrandFacebook, IconBrandInstagram, IconBrandTelegram, IconBrandWhatsapp} from "@tabler/icons-react";
 import {rem} from "@mantine/core";
+import Hotjar from '@hotjar/browser';
+
+const siteId = 3798039;
+const hotjarVersion = 6;
 
 const montserrat = Montserrat({subsets: ['cyrillic']})
 
 export default function Home() {
+  Hotjar.init(siteId, hotjarVersion);
+
   const contacts = [
     {
       text: "Whatsapp", link: "https://wa.me/77478395761",
